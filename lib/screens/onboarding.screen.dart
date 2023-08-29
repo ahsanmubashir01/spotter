@@ -12,6 +12,7 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -41,8 +42,8 @@ class OnboardingScreen extends StatelessWidget {
               Row(
                 children: [
                   ElevatedButton(
-                    onPressed: () =>
-                        Get.toNamed('/chat'), //call any screen   /exploreMain
+                    onPressed: () => Get.toNamed(
+                        '/profilesettings'), //call any screen   /exploreMain
 
                     child: Text('Registrate'),
                   ),
@@ -56,7 +57,14 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+
+
+
+
+
+
+
             ],
           ),
         ),
