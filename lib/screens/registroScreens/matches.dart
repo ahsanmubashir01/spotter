@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:spotter/screens/registroScreens/mainprofile.dart';
 
 import '../widgets/appbarwidget.dart';
 
@@ -38,9 +39,19 @@ class _MatchesState extends State<Matches> {
             SizedBox(
               width: 70,
             ),
-            Text(
-              'Matches',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainProfile()),
+                );
+
+              },
+              child: Text(
+                'Matches',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
             ),
             SizedBox(
               width: 70,

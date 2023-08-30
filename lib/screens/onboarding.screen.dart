@@ -4,7 +4,6 @@ import 'package:spotter/controllers/autentificacion.controller.dart';
 
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
-
   // ignore: unused_field
   final AutentificacionController _autentificacionController =
       Get.put(AutentificacionController());
@@ -42,8 +41,8 @@ class OnboardingScreen extends StatelessWidget {
               Row(
                 children: [
                   ElevatedButton(
-                    onPressed: () => Get.toNamed(
-                        '/profilesettings'), //call any screen   /exploreMain
+                    onPressed: () =>
+                        Get.toNamed('/register'), //call any screen   /exploreMain
 
                     child: Text('Registrate'),
                   ),
@@ -58,13 +57,6 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
-
-
-
-
-
-
             ],
           ),
         ),

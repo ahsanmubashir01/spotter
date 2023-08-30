@@ -140,7 +140,7 @@ class RegisterScreen extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                 child: ElevatedButton(
-                    onPressed: _comprobarFormularioDeRegistro,
+                    onPressed: () => Get.toNamed('/login'),
                     child: Text('Registrarse'),
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(double.infinity, 0),

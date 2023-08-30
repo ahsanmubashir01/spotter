@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:spotter/screens/exploreMain.screen.dart';
 import 'package:spotter/screens/listLikes.screen.dart';
 import 'package:spotter/screens/registroScreens/Stories.dart';
+import 'package:spotter/screens/registroScreens/bottomnavbar.dart';
 import 'package:spotter/screens/registroScreens/chat.dart';
 import 'package:spotter/screens/registroScreens/chatnew.dart';
 import 'package:spotter/screens/registroScreens/likes.dart';
@@ -11,6 +12,7 @@ import 'package:spotter/screens/registroScreens/messagelist.dart';
 import 'package:spotter/screens/registroScreens/payment.dart';
 import 'package:spotter/screens/registroScreens/photofullscreen.dart';
 import 'package:spotter/screens/registroScreens/privacypolicy.dart';
+import 'package:spotter/screens/registroScreens/profile.dart';
 import 'package:spotter/screens/registroScreens/profilesettings.dart';
 import 'package:spotter/screens/registroScreens/subscription.dart';
 import 'package:spotter/screens/registroScreens/subscriptionoptingmessage.dart';
@@ -56,4 +58,6 @@ List<GetPage<dynamic>> routes = [
   GetPage(name: '/profilesettings', page: () => MainProfile()),
   // GetPage(name: '/profilesettings', page: () => ProfileSettings()),
   GetPage(name: '/messagelist', page: () => MessageList()),
+  GetPage(name: '/bnavbar', page: () => BottomNavBarScreen()),
+  GetPage(name: '/profile', page: () => Fitness()),
 ];

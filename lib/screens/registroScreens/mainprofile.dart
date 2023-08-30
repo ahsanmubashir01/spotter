@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotter/screens/registroScreens/likes.dart';
 
 class MainProfile extends StatefulWidget {
   const MainProfile({Key? key}) : super(key: key);
@@ -54,9 +55,15 @@ class _MainProfileState extends State<MainProfile> {
                       )),
                 ),
                 SizedBox(width: 40),
-                Text(
-                  'Profile',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                GestureDetector(
+                  onTap: (){ Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );},
+                  child: Text(
+                    'Profile',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
                 )
               ],
             ),

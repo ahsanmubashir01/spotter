@@ -190,7 +190,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Spacer(),
                   TextButton(
-                    onPressed: () => Get.toNamed('/terms'),
+                    onPressed: () => Get.toNamed('/term'),
                     child: Text('Términos y condiciones',
                         style: Get.textTheme.bodySmall),
                   ),
