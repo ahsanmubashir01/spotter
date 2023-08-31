@@ -4,14 +4,18 @@ import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:spotter/screens/profile.screen.dart';
-
 import '../models/usuario.dart';
 import '../utils/calculoEdad.util.dart';
 
-class ExploreMainScreen extends StatelessWidget {
+class ExploreMainScreen extends StatefulWidget {
   ExploreMainScreen({super.key});
 
-  final CardSwiperController _controllerCards = CardSwiperController();
+  @override
+  State<ExploreMainScreen> createState() => _ExploreMainScreenState();
+}
+
+class _ExploreMainScreenState extends State<ExploreMainScreen> {
+  CardSwiperController _controllerCards = CardSwiperController();
 
   final cards =
       candidates.map((candidate) => ImageConInformacion(candidate)).toList();

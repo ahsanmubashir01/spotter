@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spotter/controllers/autentificacion.controller.dart';
+import 'exploreMain.screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
@@ -41,8 +42,19 @@ class OnboardingScreen extends StatelessWidget {
               Row(
                 children: [
                   ElevatedButton(
-                    onPressed: () =>
-                        Get.toNamed('/register'), //call any screen   /exploreMain
+                    onPressed: ()
+                        // {
+                        // Navigator.push(
+                        // context,
+                        // MaterialPageRoute(
+                        // builder: (context) => ExploreMainScreen(),
+                        // ),
+                        // );
+                        // },
+
+                        =>
+                        Get.toNamed(
+                            '/register'), //call any screen   /exploreMain
 
                     child: Text('Registrate'),
                   ),

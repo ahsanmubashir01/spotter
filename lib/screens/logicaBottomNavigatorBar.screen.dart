@@ -28,8 +28,8 @@ class _LogicaBottomNavigatorBarScreenState
 
   static List<Widget> _widgetOptions = <Widget>[
     ExploreMainScreen(),
-    Matches(),
-    // HomePage(),
+    // Matches(),
+    HomePage(),
     MessageList(),
     Fitness(),
   ];

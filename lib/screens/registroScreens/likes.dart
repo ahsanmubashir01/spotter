@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       '   Matches',
                       style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(width: 65),
@@ -54,41 +54,22 @@ class HomePage extends StatelessWidget {
               child: Container(
                 child: TabBarView(
                   children: [
-                    // First tab content / singlechildscrollview
                     Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(27, 0, 0, 0),
-                          child: Container(
-                            height: 310,
-                            child: CardSwiper(
-                              cardsCount: 3,
-                              onSwipe: _onSwipe,
-                              cardBuilder: (context, index) => ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/images/fit.png',
-                                  height: 300,
-                                  width: 250,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 30),
+                        _buildSwiperContent(_onSwipe),
+                        SizedBox(height: 10),
                         Text(
                           'Give them a reason\nto notice you',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
+                              fontWeight: FontWeight.bold, fontSize: 32),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 5),
                         Text(
                           'People who like you will appear here.\nBrush up your profile to attract more likes.',
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,style: TextStyle(fontSize: 19),
                         ),
-                        SizedBox(height: 50),
+                        SizedBox(height: 30),
                         Container(
                           width: 280,
                           child: ElevatedButton(
@@ -106,41 +87,24 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Second tab content / singlechildscrollview
                     Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(27, 0, 0, 0),
-                          child: Container(
-                            height: 310,
-                            child: CardSwiper(
-                              cardsCount: 3,
-                              onSwipe: _onSwipe1,
-                              cardBuilder: (context, index) => ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/images/fit.png',
-                                  height: 300,
-                                  width: 250,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 40),
+                        _buildSwiperContent(_onSwipe1),
+                        SizedBox(height: 20),
                         Text(
                           "Let's get you matched!",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
+                              fontWeight: FontWeight.bold, fontSize: 32),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 15),
                         Text(
                           'Once you start swiping, all your actions will\nappear here.',
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,style: TextStyle(fontSize: 19),
                         ),
-                        SizedBox(height: 86),
+                        SizedBox(
+                          height: 48,
+                        ),
                         Container(
                           width: 280,
                           child: ElevatedButton(
@@ -170,6 +134,36 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildSwiperContent(
+      bool Function(int, int?, CardSwiperDirection) onSwipe) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(27, 0, 0, 0),
+      child: Container(
+        height: 280,
+        child: CardSwiper(
+          cardsCount: 3,
+          onSwipe: onSwipe,
+          cardBuilder: (context, index) => ClipRRect(
+            borderRadius: BorderRadius.circular(40),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Image.asset(
+                'assets/images/fit.png',fit: BoxFit.cover,
+                height: 150,
+                width: 200,
+
+              ),
+            ),
+          ),
+
+        ),
+
+      ),
+
+    );
+
   }
 
   bool _onSwipe(
