@@ -7,8 +7,14 @@ import 'package:spotter/controllers/autentificacion.controller.dart';
 import '../controllers/usuario.controller.dart';
 import '../utils/calculoEdad.util.dart';
 
-class ProfileScreen extends StatelessWidget {
-  ProfileScreen({super.key});
+class ProfileScreen extends StatefulWidget {
+  ProfileScreen({Key? key}) : super(key: key);
+
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
   final UsuarioController usuarioController = Get.find<UsuarioController>();
   final AutentificacionController _autentificacionController = Get.find();
 
@@ -27,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
         SliverPadding(
-          padding: EdgeInsets.all(16.0), // Define el espacio de relleno deseado
+          padding: EdgeInsets.all(16.0),
           sliver: SliverList(
             delegate: SliverChildListDelegate([
               Row(
@@ -38,7 +44,9 @@ class ProfileScreen extends StatelessWidget {
                     style: Get.textTheme.bodyLarge,
                   ),
                   ElevatedButton(
-                      onPressed: () {}, child: Text('Editar Perfil')),
+                    onPressed: () {},
+                    child: Text('Editar Perfil'),
+                  ),
                 ],
               ),
               SizedBox(height: 5),
@@ -68,85 +76,7 @@ class ProfileScreen extends StatelessWidget {
                 '${usuarioController.usuario.descripcion}',
                 style: Get.textTheme.bodyMedium,
               ),
-              SizedBox(height: 20),
-              Text(
-                'Información personal',
-                style: Get.textTheme.bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Genero: ${usuarioController.usuario.genero}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Busca: ${usuarioController.usuario.sexoBusca}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Orientación: ${usuarioController.usuario.orientacionSexual!.map((e) => e.toString()).join(", ")}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Tipo de relación: ${usuarioController.usuario.tipoRelacionBusca!.map((e) => e.toString()).join(", ")}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Intereses: ${usuarioController.usuario.intereses!.map((e) => e.toString()).join(", ")}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Altura: ${usuarioController.usuario.altura}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Peso: ${usuarioController.usuario.peso}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Frecuencia de entrenamiento: ${usuarioController.usuario.frecuenciaEntrenamiento}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'Horario de entrenamiento: ${usuarioController.usuario.horarioEntrenamiento}',
-                style: Get.textTheme.bodyMedium,
-              ),
-              SizedBox(height: 20),
-              usuarioController.usuario.fotos.length != 0
-                  ? Container(
-                      height: usuarioController.usuario.fotos.length > 3
-                          ? Get.height * 0.43
-                          : Get.height * 0.22,
-                      child: GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                          crossAxisCount: 3,
-                          childAspectRatio:
-                              1 / 1.5, // Espaciado horizontal entre elementos
-                        ),
-                        itemCount: usuarioController.usuario.fotos.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          // Aquí construyes y retornas cada elemento de la cuadrícula
-                          return _gridComponentConFoto(
-                              usuarioController.usuario.fotos[index]);
-                        },
-                      ),
-                    )
-                  : Container(),
-              // Obx(() => Text(
-              //       'Fotos: ${usuarioController.usuario.fotos}',
-              //       style: Get.textTheme.bodySmall,
-              //     )),
+              // Continue adding the rest of your widgets
               ElevatedButton(
                 onPressed: () async {
                   await _autentificacionController.logout();

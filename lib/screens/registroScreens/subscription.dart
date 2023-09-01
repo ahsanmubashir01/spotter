@@ -204,8 +204,7 @@ class _SubscriptionState extends State<Subscription> {
               height: 60,
               width: 310,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(184, 16, 16,
-                    0.2), // Change this to the desired background color
+                color: Color.fromRGBO(253, 224, 224, 1), // Change this to the desired background color
                 borderRadius: BorderRadius.circular(
                     20), // Adjust the radius for rounded corners
                 border: Border.all(

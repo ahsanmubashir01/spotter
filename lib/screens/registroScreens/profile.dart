@@ -187,13 +187,12 @@ class _FitnessState extends State<Fitness> {
                                   boxShadow: [
                                     BoxShadow(color: Colors.grey, blurRadius: 2)
                                   ],
-                                  color: Colors.white,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
                                 child: TextButton(
                                   style: TextButton.styleFrom(
-                                    side: BorderSide(color: Colors.white),
                                     shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(50)),
@@ -209,7 +208,7 @@ class _FitnessState extends State<Fitness> {
                                       ),
                                       Text(
                                         '1 km',
-                                        style: TextStyle(color: Colors.red),
+                                        style: TextStyle(color: Color.fromRGBO(223,64,187,1)),
                                       )
                                     ],
                                   ),
@@ -250,7 +249,7 @@ class _FitnessState extends State<Fitness> {
                             alignment: Alignment.topLeft,
                             child: Text(
                               'Read more',
-                              style: TextStyle(color: Colors.red),
+                              style: TextStyle(color: Color.fromRGBO(184,16,16,1)),
                             ),
                           ),
                           SizedBox(
@@ -391,14 +390,14 @@ class _FitnessState extends State<Fitness> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                width: 60, // Adjust the width as needed
-                                height: 30, // Adjust the height as needed
+                                width: 75, // Adjust the width as needed
+                                height: 33, // Adjust the height as needed
                                 decoration: BoxDecoration(
                                   boxShadow: [
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.grey,
+                                  color: Color.fromRGBO(237, 235, 235, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -413,18 +412,19 @@ class _FitnessState extends State<Fitness> {
                                     onPressed: () {},
                                     child: Text(
                                       '75kg',
-                                      style: TextStyle(color: Colors.red),
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(184,16,16,1), fontSize: 13),
                                     )),
                               ),
                               Container(
-                                width: 70, // Adjust the width as needed
-                                height: 30, // Adjust the height as needed
+                                width: 75, // Adjust the width as needed
+                                height: 33, // Adjust the height as needed
                                 decoration: BoxDecoration(
                                   boxShadow: [
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.grey,
+                                  color: Color.fromRGBO(237, 235, 235, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -439,18 +439,19 @@ class _FitnessState extends State<Fitness> {
                                     onPressed: () {},
                                     child: Text(
                                       '750kg',
-                                      style: TextStyle(color: Colors.red),
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(184,16,16,1), fontSize: 13),
                                     )),
                               ),
                               Container(
-                                width: 80, // Adjust the width as needed
-                                height: 30, // Adjust the height as needed
+                                width: 75, // Adjust the width as needed
+                                height: 33, // Adjust the height as needed
                                 decoration: BoxDecoration(
                                   boxShadow: [
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.grey,
+                                  color: Color.fromRGBO(237, 235, 235, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -465,7 +466,8 @@ class _FitnessState extends State<Fitness> {
                                     onPressed: () {},
                                     child: Text(
                                       '265.54kg',
-                                      style: TextStyle(color: Colors.red),
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(184,16,16,1), fontSize: 13),
                                     )),
                               ),
                             ],
@@ -486,7 +488,7 @@ class _FitnessState extends State<Fitness> {
                             height: 10,
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: 90, // Adjust the width as needed
@@ -496,7 +498,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -523,7 +525,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -550,7 +552,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -585,7 +587,7 @@ class _FitnessState extends State<Fitness> {
                           ),
                           SizedBox(height: 10),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: 80,
@@ -595,7 +597,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -611,7 +613,7 @@ class _FitnessState extends State<Fitness> {
                                   child: Row(
                                     children: [
                                       Image.asset('assets/health.png'),
-                                      SizedBox(width: 5),
+                                      SizedBox(width: 1),
                                       Text(
                                         'Powerlifting',
                                         style: TextStyle(
@@ -632,7 +634,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -670,7 +672,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -712,7 +714,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -727,6 +729,9 @@ class _FitnessState extends State<Fitness> {
                                   onPressed: () {},
                                   child: Row(
                                     children: [
+                                      SizedBox(
+                                        width: 3,
+                                      ),
                                       Image.asset('assets/ripple.png'),
                                       SizedBox(width: 5),
                                       Text(
@@ -749,7 +754,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -764,7 +769,7 @@ class _FitnessState extends State<Fitness> {
                                   onPressed: () {},
                                   child: Row(
                                     children: [
-                                      SizedBox(width: 10),
+                                      SizedBox(width: 12),
                                       Image.asset(
                                           'assets/Vector (Stroke) (1).png'),
                                       SizedBox(width: 5),
@@ -788,7 +793,7 @@ class _FitnessState extends State<Fitness> {
                                     BoxShadow(
                                         color: Colors.white, blurRadius: 2)
                                   ],
-                                  color: Colors.pink,
+                                  color: Color.fromRGBO(253, 224, 224, 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
                                 ),
@@ -841,7 +846,7 @@ class _FitnessState extends State<Fitness> {
                                   'See all',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.red),
+                                      color: Color.fromRGBO(223,64,87,1)),
                                 ),
                               ),
                             ],

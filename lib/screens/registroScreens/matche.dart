@@ -46,7 +46,7 @@ class _MatchAppState extends State<MatchApp> {
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                   fixedSize: const Size(250, 50),
-                  backgroundColor:  Color(0xffffb6c1),
+                  backgroundColor:Color.fromRGBO(253, 224, 224, 1),
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)))),
               onPressed: () {

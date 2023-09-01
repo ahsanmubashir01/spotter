@@ -54,7 +54,7 @@ class OnboardingScreen extends StatelessWidget {
 
                         =>
                         Get.toNamed(
-                            '/register'), //call any screen   /exploreMain
+                            '/exploreMain'), //call any screen   /exploreMain
 
                     child: Text('Registrate'),
                   ),
